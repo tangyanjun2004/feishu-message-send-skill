@@ -15,7 +15,8 @@
       "Bash(cp tests/testfile/config.test.json build/config.json)",
       "Bash(cp config.example.json build/config.example.json)",
       "Bash(cp tests/testfile/config.test.json dist/config.json)",
-      "Bash(cp config.example.json dist/config.example.json)"
+      "Bash(cp config.example.json dist/config.example.json)",
+      "Bash(./feishu-sender.exe --help)"
     ]
   }
 }

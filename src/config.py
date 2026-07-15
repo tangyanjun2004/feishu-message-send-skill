@@ -8,7 +8,7 @@ def get_config_path() -> Path:
     if os.environ.get("FEISHU_SENDER_CONFIG"):
         return Path(os.environ["FEISHU_SENDER_CONFIG"])
     try:
-        base_path = Path(__file__).parent.parent
+        base_path = Path(__file__).parent
     except NameError:
         base_path = Path.cwd()
     config_path = base_path / "config.json"

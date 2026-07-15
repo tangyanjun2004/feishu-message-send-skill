@@ -21,6 +21,7 @@ def main():
         "--name", "feishu-sender",
         "--clean",
         "--distpath", "dist/bin",
+        "--paths", "src",
         "src/cli.py"
     ]
     result = subprocess.run(cmd)

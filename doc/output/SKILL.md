@@ -1,12 +1,8 @@
 ---
-name: feishu-sender
+name: feishu-message-sender
 description: 发送飞书（Lark）消息的 Skill，支持文本和交互式卡片格式
-author: OpenClaw
 version: 1.0.0
-license: MIT
 ---
-
-# feishu-sender Skill
 
 ## 概述
 
