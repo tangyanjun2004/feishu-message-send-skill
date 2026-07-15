@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m pytest tests/test_parser.py -v)",
+      "Bash(python -m pytest -v)",
+      "Bash(FEISHU_SENDER_CONFIG=\"tests/testfile/config.test.json\" python -m src.cli tests/testfile/card_example.json card)",
+      "Bash(FEISHU_SENDER_CONFIG=\"tests/testfile/config.test.json\" PYTHONPATH=\"src\" python src/cli.py tests/testfile/card_example.json card)",
+      "Bash(python tests/run_sender_tests.py)",
+      "Bash(rm tests/test_sender.py)",
+      "Bash(mv tests/run_sender_tests.py tests/test_sender.py)",
+      "Bash(pip install *)",
+      "Bash(python build.py)",
+      "Bash(copy tests\\\\testfile\\\\config.test.json build\\\\config.json)",
+      "Bash(copy config.example.json build\\\\config.example.json)",
+      "Bash(cp tests/testfile/config.test.json build/config.json)",
+      "Bash(cp config.example.json build/config.example.json)",
+      "Bash(cp tests/testfile/config.test.json dist/config.json)",
+      "Bash(cp config.example.json dist/config.example.json)"
+    ]
+  }
+}

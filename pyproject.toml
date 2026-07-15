@@ -1,0 +1,22 @@
+[project]
+name = "feishu-sender"
+version = "0.1.0"
+description = "OpenClaw skill for sending Feishu messages"
+requires-python = ">=3.9"
+dependencies = [
+    "requests>=2.31.0",
+]
+
+[project.scripts]
+feishu-sender = "cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.pyright]
+extraPaths = ["src"]
