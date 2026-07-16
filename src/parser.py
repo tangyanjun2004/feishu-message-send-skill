@@ -33,7 +33,7 @@ def detect_content_type(content: str, file_path: Path | str | None = None) -> st
     # Then check if content is JSON card format
     try:
         data = json.loads(content)
-        if isinstance(data, dict) and ("card" in data or "msg_type" in data or "schema" in data):
+        if isinstance(data, dict) and ("body" in data or "elements" in data or "config" in data):
             return "card"
     except json.JSONDecodeError:
         pass

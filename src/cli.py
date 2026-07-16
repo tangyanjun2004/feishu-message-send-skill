@@ -26,6 +26,7 @@ def main():
         app_secret = config["APP_SECRET"]
         receive_id = config["RECEIVE_ID"]
         base_dir = config.get("BASE_DIR")
+        receive_id_type = config.get("RECEIVE_ID_TYPE")
 
         content = read_file(args.file_path, base_dir)
 
@@ -33,7 +34,7 @@ def main():
         if msg_type == "auto":
             msg_type = detect_content_type(content, args.file_path)
 
-        result = send_message(app_id, app_secret, receive_id, content, msg_type)
+        result = send_message(app_id, app_secret, receive_id, content, msg_type, receive_id_type)
         print(f"Message sent successfully (type: {msg_type})")
         print(f"Response: {result}")
         return 0
