@@ -1,5 +1,6 @@
 {
   "APP_ID": "cli_xxx",
   "APP_SECRET": "xxx",
-  "RECEIVE_ID": "ou_xxx"
+  "RECEIVE_ID": "ou_xxx",
+  "BASE_DIR": ""
 }

@@ -19,9 +19,12 @@ Create `config.json` in the same directory as the binary:
 {
   "APP_ID": "cli_xxx",
   "APP_SECRET": "xxx",
-  "RECEIVE_ID": "ou_xxx"
+  "RECEIVE_ID": "ou_xxx",
+  "BASE_DIR": "C:\\path\\to\\files"
 }
 ```
+
+**BASE_DIR (optional)**: Base directory for files. If configured, you can pass just filenames or relative paths to the CLI.
 
 ### 2. CLI Usage
 
@@ -36,14 +39,18 @@ Message types:
 
 Examples:
 ```bash
-# Send as card
+# Send as card (full path)
+feishu-sender C:\\reports\\report.json card
+
+# Send markdown as card (full path)
+feishu-sender C:\\reports\\update.md auto
+
+# Send as text (full path)
+feishu-sender C:\\notices\\notice.txt text
+
+# With BASE_DIR configured, you can use just filenames:
 feishu-sender report.json card
-
-# Send markdown as card
 feishu-sender update.md auto
-
-# Send as text
-feishu-sender notice.txt text
 ```
 
 ### 3. Build Binary

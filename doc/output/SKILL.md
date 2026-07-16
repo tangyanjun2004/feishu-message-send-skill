@@ -1,7 +1,7 @@
 ---
 name: feishu-message-sender
 description: 发送飞书（Lark）消息的 Skill，支持文本和交互式卡片格式
-version: 1.0.0
+version: 1.1.0
 ---
 
 ## 概述
@@ -28,8 +28,8 @@ cd {baseDir}/bin
 
 ### 命令行参数
 
-```
-feishu-sender <file-path> <message-type>
+```bash
+.\feishu-sender.exe <file-path> <message-type>
 ```
 
 | 参数 | 类型 | 必需 | 说明 |
@@ -92,22 +92,32 @@ Error: ...
 
 ## 使用示例
 
-### 发送卡片
+### 发送卡片（完整路径）
 
 ```bash
-feishu-sender report.json card
+.\feishu-sender.exe C:\\reports\\report.json card
 ```
 
-### 发送文本
+### 发送文本（完整路径）
 
 ```bash
-feishu-sender notice.txt text
+.\feishu-sender.exe C:\\notices\\notice.txt text
 ```
 
-### 自动检测
+### 自动检测（完整路径）
 
 ```bash
-feishu-sender data.md auto
+.\feishu-sender.exe C:\\data\\data.md auto
+```
+
+### 使用 BASE_DIR（只需文件名）
+
+配置 BASE_DIR 后：
+
+```bash
+.\feishu-sender.exe report.json card
+.\feishu-sender.exe notice.txt text
+.\feishu-sender.exe data.md auto
 ```
 
 ## 目录结构

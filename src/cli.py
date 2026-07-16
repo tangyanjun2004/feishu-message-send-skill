@@ -25,8 +25,9 @@ def main():
         app_id = config["APP_ID"]
         app_secret = config["APP_SECRET"]
         receive_id = config["RECEIVE_ID"]
+        base_dir = config.get("BASE_DIR")
 
-        content = read_file(args.file_path)
+        content = read_file(args.file_path, base_dir)
 
         msg_type = args.msg_type
         if msg_type == "auto":

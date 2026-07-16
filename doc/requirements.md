@@ -28,9 +28,12 @@
 {
   "APP_ID": "飞书应用 APP ID",
   "APP_SECRET": "飞书应用 APP Secret",
-  "RECEIVE_ID": "接收者 ID"
+  "RECEIVE_ID": "接收者 ID",
+  "BASE_DIR": "文件基目录（可选）"
 }
 ```
+
+**BASE_DIR（可选）**：指定发送文件的基目录。如果配置了此项，CLI 接受的文件路径可以是相对于 BASE_DIR 的相对路径（或仅文件名）。程序会优先尝试直接打开传入的路径，若失败则尝试与 BASE_DIR 拼接。
 
 ### 4. 飞书 API
 
